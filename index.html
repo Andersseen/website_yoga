@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- MY STYLE -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Yoga</title>
 </head>
@@ -38,6 +40,26 @@
 
         </header>
         <main class="main">
+            <section class="slider">
+                <!-- Swiper -->
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/images/yoga.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/yoga2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/yoga3.jpg" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+            </section>
             <section class="about">
 
             </section>
@@ -58,9 +80,15 @@
     </div>
 
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
+    <!-- my script -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+
+
 </body>
 
 </html>
