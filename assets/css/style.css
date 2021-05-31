@@ -99,7 +99,7 @@ body{
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: salmon;
+  background-color: #CEE1CB;
 }
 .header__container {
   max-width: 1200px;
@@ -110,13 +110,13 @@ body{
   justify-content: space-between;
   min-height: 70px;
 }
-.header__logo {
-  border-radius: 50%;
-  background-color: #dfc0a9;
+.header__logo{
   position: relative;
+}
+.header__logo img{
+  border-radius: 50%;
   z-index: 5;
-  width: 40px;
-  height: 40px;
+  width: 5rem;
 }
 .menu__icon {
   display: none;
@@ -130,7 +130,7 @@ body{
   margin: 0 0 0 20px;
 }
 .menu__link {
-  color: azure;
+  color: #9E95BD;
   font-size: 1.2rem;
 }
 
@@ -148,6 +148,27 @@ body._touch .menu__list li {
 
 .menu__body._active {
   transform: translate(0, 0);
+}
+
+
+
+/* MAIN PAGE */
+
+section{
+  height: 90vh;
+}
+
+.about{
+  background-color: antiquewhite;
+  margin-top: 10vh;
+}
+
+.pricing{
+  background-color: salmon;
+}
+
+.contact{
+  background-color: slateblue;
 }
 
 
