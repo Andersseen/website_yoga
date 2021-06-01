@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- MY STYLE -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Yoga</title>
@@ -29,9 +28,10 @@
 
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li><a data-goto=".about" href="#" class="menu__link">sector#1</a></li>
-                            <li><a data-goto=".pricing" href="#" class="menu__link">sector#2</a></li>
-                            <li><a data-goto=".contact" href="#" class="menu__link">sector#3</a></li>
+                            <li><a data-goto="#cover" href="#" class="menu__link">Principal</a></li>
+                            <li><a data-goto="#about" href="#" class="menu__link">Sobre mi</a></li>
+                            <li><a data-goto="#pricing" href="#" class="menu__link">Precios</a></li>
+                            <li><a data-goto="#contact" href="#" class="menu__link">Contacto</a></li>
                         </ul>
                     </nav>
 
@@ -40,54 +40,101 @@
 
         </header>
         <main class="main">
-            <section class="slider">
-                <!-- Swiper -->
+            <section class="cover" id="cover">
+                <h1 class="cover__title">Titulo de tus classes</h1>
+                <h2 class="cover__subtitle">Algo de subtitulo</h2>
+                <button class="cover__btn">Boton</button>
+            </section>
+            <!-- ABOUT -->
+            <section class="about" id="about">
+                <h2 class="section__title">Sobre mi</h2>
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./assets/images/yoga.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/yoga2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/yoga3.jpg" />
-                        </div>
+                <div class="about__container">
+                    <div class="about__img">
+                        <img src="https://via.placeholder.com/450" alt="">
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
+                    <div>
+                        <h2 class="about__subtitle">Tu nombre</h2>
+                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum
+                            expedita quo
+                            culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque
+                            perferendis! Recusandae alias accusamus atque.</p>
+                    </div>
                 </div>
-
             </section>
-            <section class="about">
-
-            </section>
-            <section class="pricing">
+            <section class="pricing" id="pricing">
 
             </section>
 
-            <section class="contact">
+            <section class="contact" id="contact">
+                <h2 class="section__title">Para contactar conmigo</h2>
+                <div class="contact__container">
+                    <div class="contact__form">
+                        <form class="form__wrapper" action="#">
+
+                            <input class="form__input" type="text" placeholder="Nombre">
+
+                            <input class="form__input" type="email" placeholder="Email">
+
+
+
+                            <textarea class="form__input" name="area" cols="60" rows="5"></textarea>
+
+                            <div>
+                                <label class="container">He leido y aceptado el <a href="#">aviso
+                                        legal</a>.<span>*</span>
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="submit" value="Enviar" class="form__btn">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="contact__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.561914601122!2d-3.8660081847457297!3d40.30768507937796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418eb49b0ece21%3A0xcc39667ec82814b2!2sPlaza%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1622563090830!5m2!1ses!2ses"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
 
             </section>
         </main>
 
 
         <footer class="footer">
+            <section class="footer__wrapper">
+                <div class="footer__block">
+                    <h6>Mapa de la pagina</h6>
+                    <a data-goto=".about" href="#" class="menu__link">Sobre mi</a>
+                    <a data-goto=".pricing" href="#" class="menu__link">Precios</a>
+                    <a data-goto=".contact" href="#" class="menu__link">Contacto</a>
+                </div>
+                <div class="footer__block">
+                    <h6>Como puedes contactar conmigo</h6>
+                    <p>telefono 00 00000 00 </p>
+                    <p>email sfadbaskj@sanan</p>
+                </div>
+                <div class="footer__block">
+                    <h6>Donde estamos</h6>
+                    <p>adres de la escuela</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.561914601122!2d-3.8660081847457297!3d40.30768507937796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418eb49b0ece21%3A0xcc39667ec82814b2!2sPlaza%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1622563090830!5m2!1ses!2ses"
+                        width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+            <small>&copy;Todos los derechos estan reservados</small>
         </footer>
 
 
     </div>
 
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
     <!-- my script -->
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/swiper.js"></script>
-
 
 </body>
 
