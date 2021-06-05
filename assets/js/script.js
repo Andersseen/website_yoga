@@ -66,3 +66,31 @@ if (menuLinks.length > 0) {
         }
     }
 };
+
+
+
+
+
+/*SCROLL REVEAL ANIMATION*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+/*SCROLL COVER*/
+sr.reveal('.cover__title', {});
+sr.reveal('.cover__subtitle', { delay: 200 });
+sr.reveal('.cover__btn', { delay: 400 });
+
+/*SCROLL ABOUT*/
+sr.reveal('.about__img', {});
+sr.reveal('.about__subtitle', { delay: 400 });
+sr.reveal('.about__text', { delay: 400 });
+
+// PRICING
+sr.reveal('.pricing__block', { interval: 200 });
+
+/*SCROLL CONTACT*/
+sr.reveal('.contact__input', { interval: 200 });
