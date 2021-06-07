@@ -68,9 +68,6 @@ if (menuLinks.length > 0) {
 };
 
 
-
-
-
 /*SCROLL REVEAL ANIMATION*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -82,7 +79,7 @@ const sr = ScrollReveal({
 /*SCROLL COVER*/
 sr.reveal('.cover__title', {});
 sr.reveal('.cover__subtitle', { delay: 200 });
-sr.reveal('.cover__btn', { delay: 400 });
+// sr.reveal('.cover__btn', { delay: 400 });
 
 /*SCROLL ABOUT*/
 sr.reveal('.about__img', {});
@@ -94,3 +91,36 @@ sr.reveal('.pricing__block', { interval: 200 });
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input', { interval: 200 });
+
+
+
+// SCROLLBAR
+
+const progressBarContainer = document.querySelector("#progressBarContainer");
+const progressBar = document.querySelector("#progressBar");
+let totalPageHeight = document.body.scrollHeight - window.innerHeight;
+let debounceResize;
+
+window.addEventListener("scroll", () => {
+    let newProgressHeight = window.pageYOffset / (totalPageHeight);
+    progressBar.style.transform = `scale(1,${newProgressHeight})`;
+
+}, {
+    capture: true,
+    passive: true
+});
+
+window.addEventListener("resize", () => {
+    clearTimeout(debounceResize);
+    debounceResize = setTimeout(() => {
+        totalPageHeight = document.body.scrollHeight - window.innerHeight;
+    }, 250);
+});
+
+progressBarContainer.addEventListener("click", (e) => {
+    let newPageScroll = e.clientY / progressBarContainer.offsetHeight * totalPageHeight;
+    window.scrollTo({
+        top: newPageScroll,
+        behavior: 'smooth'
+    });
+});
